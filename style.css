@@ -246,9 +246,9 @@ footer .instagram {
   .contador-mobile {
     position: absolute;
     right: 10px;
-    top: 40px;
+    top: 38px;
     color: #3D3A50;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bolder;
     padding: 2px 5px;
     border-radius: 50%;
@@ -299,8 +299,10 @@ footer .instagram {
     border-top: 1px solid #3D3A50;
   }
   .navbar-container .navbar-drop .flechita-drop {
-    position: relative;
-    left: 60%;
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    transform: translateY(-50%);
   }
   .navbar-container .navbar-drop .navbar-dropdown.mostrar {
     display: block;

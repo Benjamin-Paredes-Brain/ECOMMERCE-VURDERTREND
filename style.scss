@@ -291,9 +291,9 @@ footer {
     .contador-mobile {
         position: absolute;
         right: 10px;
-        top: 40px;
+        top: 38px;
         color: $color-secondary;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bolder;
         padding: 2px 5px;
         border-radius: 50%;
@@ -352,8 +352,10 @@ footer {
             }
 
             .flechita-drop {
-                position: relative;
-                left: 60%;
+                position: absolute;
+                top: 20%;
+                right: 10px;
+                transform: translateY(-50%);
             }
 
             .navbar-dropdown.mostrar {
