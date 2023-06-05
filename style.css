@@ -298,12 +298,6 @@ footer .instagram {
     padding: 20px;
     border-top: 1px solid #3D3A50;
   }
-  .navbar-container .navbar-drop .flechita-drop {
-    position: absolute;
-    top: 20%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
   .navbar-container .navbar-drop .navbar-dropdown.mostrar {
     display: block;
   }
@@ -395,6 +389,7 @@ footer .instagram {
   .nav-up .barra-busqueda .barrab-desktop {
     background-color: #1A1C22;
     border: none;
+    padding: 10px;
   }
   .nav-up .header-right {
     display: flex;

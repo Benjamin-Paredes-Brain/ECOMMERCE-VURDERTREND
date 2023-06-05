@@ -351,13 +351,6 @@ footer {
                 border-top: 1px solid $color-secondary;
             }
 
-            .flechita-drop {
-                position: absolute;
-                top: 20%;
-                right: 10px;
-                transform: translateY(-50%);
-            }
-
             .navbar-dropdown.mostrar {
                 display: block;
             }
@@ -487,6 +480,7 @@ footer {
             .barrab-desktop {
                 background-color: $bg-color;
                 border: none;
+                padding: 10px;
             }
         }
 
