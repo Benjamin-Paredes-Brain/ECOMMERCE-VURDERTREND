@@ -307,7 +307,8 @@ footer {
 
         .barrab-mobile.mostrar {
             display: block;
-            background-color: $color-primary;
+            background-color: $color-text;
+            color: $color-secondary;
             position: fixed;
             top: 0;
             left: 0;
@@ -389,6 +390,29 @@ footer {
         }
     }
 
+    .opciones-buscador {
+        display: block;
+        position: fixed;
+        background-color: $color-secondary;
+        z-index: 999;
+        top: 3%;
+    }
+
+    .opciones-buscador-contenido {
+        color: $color-text;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.5px solid $bg-color;
+        border-bottom: 0.5px solid $bg-color;
+
+        &:hover {
+            color: $color-primary;
+
+        }
+    }
+
     .nav-up {
         display: none;
     }
@@ -466,7 +490,32 @@ footer {
     .header-right-mobile {
         display: none;
     }
+    
+    
+    .opciones-buscador {
+        display: block;
+        position: fixed;
+        top: 10%;
+        background-color: $color-secondary;
+        z-index: 999;
+        padding: auto;
+        margin: 10px;
+    }
 
+    .opciones-buscador-contenido {
+        color: $color-text;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.5px solid $bg-color;
+        border-bottom: 0.5px solid $bg-color;
+
+        &:hover {
+            color: $color-primary;
+
+        }
+    }
     .nav-up {
         background-color: $bg-color;
         display: flex;
@@ -479,11 +528,13 @@ footer {
 
             .barrab-desktop {
                 background-color: $bg-color;
+                color: $color-text;
                 border: none;
                 padding: 10px;
-            }
-        }
 
+            }
+
+        }
 
         .header-right {
             display: flex;
@@ -510,7 +561,7 @@ footer {
         }
 
         .contador-desktop {
-            position: absolute;
+            position: fixed;
             right: 395px;
             top: 60px;
             color: $color-secondary;

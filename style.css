@@ -261,7 +261,8 @@ footer .instagram {
   }
   .contenedor-principal .barrab-mobile.mostrar {
     display: block;
-    background-color: #8b5cf1;
+    background-color: #F7F7F7;
+    color: #3D3A50;
     position: fixed;
     top: 0;
     left: 0;
@@ -323,6 +324,25 @@ footer .instagram {
     font-size: small;
     padding: 5px;
   }
+  .opciones-buscador {
+    display: block;
+    position: fixed;
+    background-color: #3D3A50;
+    z-index: 999;
+    top: 3%;
+  }
+  .opciones-buscador-contenido {
+    color: #F7F7F7;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid #1A1C22;
+    border-bottom: 0.5px solid #1A1C22;
+  }
+  .opciones-buscador-contenido:hover {
+    color: #8b5cf1;
+  }
   .nav-up {
     display: none;
   }
@@ -376,6 +396,27 @@ footer .instagram {
   .header-right-mobile {
     display: none;
   }
+  .opciones-buscador {
+    display: block;
+    position: fixed;
+    top: 10%;
+    background-color: #3D3A50;
+    z-index: 999;
+    padding: auto;
+    margin: 10px;
+  }
+  .opciones-buscador-contenido {
+    color: #F7F7F7;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid #1A1C22;
+    border-bottom: 0.5px solid #1A1C22;
+  }
+  .opciones-buscador-contenido:hover {
+    color: #8b5cf1;
+  }
   .nav-up {
     background-color: #1A1C22;
     display: flex;
@@ -388,6 +429,7 @@ footer .instagram {
   }
   .nav-up .barra-busqueda .barrab-desktop {
     background-color: #1A1C22;
+    color: #F7F7F7;
     border: none;
     padding: 10px;
   }
@@ -411,7 +453,7 @@ footer .instagram {
     cursor: pointer;
   }
   .nav-up .contador-desktop {
-    position: absolute;
+    position: fixed;
     right: 395px;
     top: 60px;
     color: #3D3A50;

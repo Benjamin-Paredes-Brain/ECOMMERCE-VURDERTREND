@@ -41,6 +41,13 @@ stockProductos.forEach((producto) => {
   const botonAgregar = document.getElementById(`boton${producto.id}`);
   botonAgregar.onclick = () => {
     agregarProducto(producto.id);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto agregado al carrito',
+      showConfirmButton: false,
+      timer: 800
+    })
   };
 });
 

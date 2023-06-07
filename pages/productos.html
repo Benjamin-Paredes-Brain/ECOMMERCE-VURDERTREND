@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/6dfd96d313.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../style.css">
 
@@ -15,62 +16,64 @@
 
 <body>
 
-  <header>
-    <nav>
-        <div class="nav-up">
-            <form class="barra-busqueda">
-                <input type="text" placeholder="Buscar" class="barrab-desktop">
-                <button type="button" class="lupita-desktop"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-
-            <img src="../img/logo vurdertrendy2k metalico ia.png" class="logo-desktop"></img>
-
-            <div class="header-right">
-                <div class="login-div">
-                    <a href="crearcuenta.html" class="login">CREAR CUENTA</a>
-                    <span class="separador">|</span>
-                    <a href="iniciarsesion.html" class="login">INICIAR SESION</a>
-                </div>
-                <button class="boton-carrito"><i class="fas fa-shopping-cart carrito-desktop"></i><span
-                        class="contador-desktop contador-carrito"></span></button>
-            </div>
-        </div>
-        <div class="contenedor-principal">
-            <button class="navbar-boton"><i class="fa-solid fa-bars"></i></button>
-            <img src="../img/logo vurdertrendy2k metalico ia.png" class="logo-mobile"></img>
-            <div class="header-right-mobile">
+    <header>
+        <nav>
+            <div class="nav-up">
                 <form class="barra-busqueda">
-                    <input type="text" placeholder="Buscar" class="barrab-mobile">
-                    <button type="button" class="lupita-mobile"><i
+                    <input type="text" placeholder="Buscar" class="buscador barrab-desktop">
+                    <button type="button" class="lupita-desktop lupita"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
-                <button class="boton-carrito"><i class="fas fa-shopping-cart carrito-mobile"></i><span
-                        class="contador-mobile contador-carrito" ></span></button>
-            </div>
-            <div class="navbar-container">
-                <ul class="navbar-drop">
-                    <li class="ocultar-boton navbar-items"><button class="navbar-cerrar"><i
-                                class="fa-solid fa-circle-xmark"></i></button></li>
-                    <li class="navbar-items"><a href="../index.html" class="navbar-links">INICIO</a></li>
-                    <li class="navbar-items"><a href="productos.html" class="navbar-links active">PRODUCTOS</a>
-                        <span class="flechita-drop"><i
-                                class="fa-solid fa-caret-down navbar-items-dropdowns"></i></span>
-                        <ul class="navbar-dropdown">
-                            <li class="item-dropdown"><a href="" class="navbar-links">PRODUCTO1</a></li>
-                            <li class="item-dropdown"><a href="" class="navbar-links">PRODUCTO2</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-items"><a href="contacto.html" class="navbar-links">CONTACTO</a></li>
-                </ul>
-                <div class="login-div-mobile">
-                    <a href="crearcuenta.html" class="login-mobile">CREAR CUENTA</a>
-                    <span class="separador-mobile">|</span>
-                    <a href="iniciarsesion.html" class="login-mobile">INICIAR SESION</a>
+
+                <img src="../img/logo vurdertrendy2k metalico ia.png" class="logo-desktop"></img>
+                <div class="header-right">
+                    <div class="login-div">
+                        <a href="crearcuenta.html" class="login">CREAR CUENTA</a>
+                        <span class="separador">|</span>
+                        <a href="iniciarsesion.html" class="login">INICIAR SESION</a>
+                    </div>
+                    <button class="boton-carrito"><i class="fas fa-shopping-cart carrito-desktop"></i><span
+                            class="contador-desktop contador-carrito"></span></button>
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
+            <div class="opciones-buscador"></div>
+            </div>
+            <div class="contenedor-principal">
+                <button class="navbar-boton"><i class="fa-solid fa-bars"></i></button>
+                <img src="../img/logo vurdertrendy2k metalico ia.png" class="logo-mobile"></img>
+                <div class="header-right-mobile">
+                    <form class="barra-busqueda">
+                        <input type="text" placeholder="Buscar" class="barrab-mobile buscador">
+                        <button type="button" class="lupita-mobile lupita"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <button class="boton-carrito"><i class="fas fa-shopping-cart carrito-mobile"></i><span
+                            class="contador-mobile contador-carrito"></span></button>
+                </div>
+                <div class="navbar-container">
+                    <ul class="navbar-drop">
+                        <li class="ocultar-boton navbar-items"><button class="navbar-cerrar"><i
+                                    class="fa-solid fa-circle-xmark"></i></button></li>
+                        <li class="navbar-items"><a href="../index.html" class="navbar-links">INICIO</a></li>
+                        <li class="navbar-items"><a href="productos.html" class="navbar-links active">PRODUCTOS</a>
+                            <span class="flechita-drop"><i
+                                    class="fa-solid fa-caret-down navbar-items-dropdowns"></i></span>
+                            <ul class="navbar-dropdown">
+                                <li class="item-dropdown"><a href="" class="navbar-links">PRODUCTO1</a></li>
+                                <li class="item-dropdown"><a href="" class="navbar-links">PRODUCTO2</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar-items"><a href="contacto.html" class="navbar-links">CONTACTO</a></li>
+                    </ul>
+                    <div class="login-div-mobile">
+                        <a href="crearcuenta.html" class="login-mobile">CREAR CUENTA</a>
+                        <span class="separador-mobile">|</span>
+                        <a href="iniciarsesion.html" class="login-mobile">INICIAR SESION</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <h2 class="titulos">Productos</h2>
@@ -86,21 +89,23 @@
         </div>
     </div>
 
-    
     <footer>
-      <p class="copy">Copyright &copy; 2023 VurderTrend</p>
-      <div class="redes">
-        <p class="redes-sociales">Redes Sociales</p>
-        <a href="https://www.instagram.com/vurdertrend/" target="_blank"><i class="fa-brands fa-instagram instagram"></i></a>
-      </div>
+        <p class="copy">Copyright &copy; 2023 VurderTrend</p>
+        <div class="redes">
+            <p class="redes-sociales">Redes Sociales</p>
+            <a href="https://www.instagram.com/vurdertrend/" target="_blank"><i
+                    class="fa-brands fa-instagram instagram"></i></a>
+        </div>
     </footer>
 
     <!-- link javascript -->
+    <script src="../js/buscador.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/localstorageJSON.js"></script>
     <script src="../js/Producto.js"></script>
     <script src="../js/carrito.js"></script>
     <script src="../js/carritoModal.js"></script>
+
 </body>
 
 </html>
