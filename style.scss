@@ -36,6 +36,16 @@ button {
     margin: 30px;
 }
 
+.ocultar {
+    display: none;
+}
+
+.nombre-usuario {
+    color: $color-primary;
+    text-decoration: none;
+    font-size: small;
+}
+
 // Formularios
 .form {
     display: flex;
@@ -468,6 +478,10 @@ footer {
     }
 
     .login-mobile {
+        display: none;
+    }
+
+    .login-mobile-usuario {
         display: none;
     }
 

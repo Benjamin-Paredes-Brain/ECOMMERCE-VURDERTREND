@@ -30,6 +30,16 @@ button {
   margin: 30px;
 }
 
+.ocultar {
+  display: none;
+}
+
+.nombre-usuario {
+  color: #8b5cf1;
+  text-decoration: none;
+  font-size: small;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -379,6 +389,9 @@ footer .instagram {
     display: none;
   }
   .login-mobile {
+    display: none;
+  }
+  .login-mobile-usuario {
     display: none;
   }
   .separador-mobile {

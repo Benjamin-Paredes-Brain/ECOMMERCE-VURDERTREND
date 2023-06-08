@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://kit.fontawesome.com/6dfd96d313.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link rel="stylesheet" href="../style.css">
 
@@ -26,7 +27,8 @@
           <div class="login-div">
             <a href="crearcuenta.html" class="login">CREAR CUENTA</a>
             <span class="separador">|</span>
-            <a href="iniciarsesion.html" class="login">INICIAR SESION</a>
+            <a href="iniciarsesion.html" class="login iniciarsesion">INICIAR SESION</a>
+            <a href="iniciarsesion.html" class="nombre-usuario"></a>
           </div>
           <button class="boton-carrito"><i class="fas fa-shopping-cart carrito-desktop"></i><span
               class="contador-desktop contador-carrito"></span></button>
@@ -61,7 +63,8 @@
           <div class="login-div-mobile">
             <a href="crearcuenta.html" class="login-mobile">CREAR CUENTA</a>
             <span class="separador-mobile">|</span>
-            <a href="iniciarsesion.html" class="login-mobile">INICIAR SESION</a>
+            <a href="iniciarsesion.html" class="login-mobile iniciarsesion">INICIAR SESION</a>
+            <a href="iniciarsesion.html" class="nombre-usuario login-mobile-usuario"></a>
           </div>
         </div>
       </div>
@@ -71,7 +74,7 @@
   <main>
     <h2 class="titulos">Crear Cuenta</h2>
     <div class="form">
-      <form class="formulario">
+      <form class="formulario" id="formulario-crearcuenta">
         <label for="signup-name" class="label-forms">Nombre:</label>
         <input type="text" id="signup-name" name="signup-name" class="inputs-forms" placeholder="Ej: Benjamin Brain"
           required>
@@ -113,6 +116,8 @@
   <script src="../js/Producto.js"></script>
   <script src="../js/carrito.js"></script>
   <script src="../js/carritoModal.js"></script>
+  <script src="../js/crearcuenta.js"></script>
+  <Script src="../js/iniciarsesion.js"></Script>
 </body>
 
 </html>

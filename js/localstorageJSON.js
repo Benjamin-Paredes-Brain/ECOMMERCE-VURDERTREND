@@ -9,4 +9,21 @@ function cargarCarrito() {
   carritoGuardado && (carrito = JSON.parse(carritoGuardado));
 };
 
+function guardarCuentas() {
+  localStorage.setItem("cuentas", JSON.stringify(cuentas))
+};
+
+function cargarCuentas() {
+  const cuentasGuardadas = localStorage.getItem("cuentas");
+  cuentasGuardadas && (cuentas = JSON.parse(cuentasGuardadas));
+}
+
+function guardarSesion() {
+  localStorage.setItem("sesion", JSON.stringify(sesion));
+};
+
+function cargarSesion() {
+  const sesionGuardada = localStorage.getItem("sesion");
+  sesionGuardada && (sesion = JSON.parse(sesionGuardada))
+}
 

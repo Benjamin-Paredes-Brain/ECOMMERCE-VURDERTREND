@@ -35,20 +35,23 @@ stockProductos.forEach((producto) => {
                      <p class="producto-txt">$${producto.precio}</p>
                      <button id="boton${producto.id}" class="boton">Agregar al carrito</button>`;
 
-  contenedorProductos.appendChild(div);
+  if (window.location.pathname.includes("productos.html")) {
+    contenedorProductos.appendChild(div);
 
-  // Agrega productos al carrito
-  const botonAgregar = document.getElementById(`boton${producto.id}`);
-  botonAgregar.onclick = () => {
-    agregarProducto(producto.id);
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Producto agregado al carrito',
-      showConfirmButton: false,
-      timer: 800
-    })
-  };
+
+    // Agrega productos al carrito
+    const botonAgregar = document.getElementById(`boton${producto.id}`);
+    botonAgregar.onclick = () => {
+      agregarProducto(producto.id);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Producto agregado al carrito',
+        showConfirmButton: false,
+        timer: 800
+      })
+    };
+  }
 });
 
 
