@@ -40,6 +40,16 @@ button {
   font-size: small;
 }
 
+.cerrarsesion {
+  color: #8b5cf1;
+  text-decoration: none;
+  font-size: small;
+}
+
+.flechita-drop {
+  display: none;
+}
+
 .form {
   display: flex;
   justify-content: center;

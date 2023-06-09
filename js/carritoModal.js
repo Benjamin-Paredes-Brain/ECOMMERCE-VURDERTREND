@@ -73,6 +73,7 @@ botonCerrar.onclick = () => {
     modal.style.display = "none";
 };
 
-// Carga el carrito desde localStorage al cargar la página
+cargarCuentas();
+cargarSesion();
 cargarCarrito();
 actualizarContadorCarrito();

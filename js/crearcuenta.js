@@ -1,7 +1,6 @@
 // CREAR CUENTA
 
 const formCrearCuenta = document.getElementById("formulario-crearcuenta");
-let cuentas = [];
 
 formCrearCuenta.addEventListener("submit", crearCuenta);
 
@@ -20,14 +19,10 @@ function crearCuenta(e) {
             title: 'CUENTA CREADA EXITOSAMENTE',
             showConfirmButton: false,
             timer: 1300
-          })
+        })
 
-        const nuevaCuenta = {
-            nombre: nombreCrearCuenta,
-            email: emailCrearCuenta,
-            contraseña: contraseñaCrearCuenta
-        };
-        cuentas.push(nuevaCuenta);
+        cuentas.push(new Cuenta(nombreCrearCuenta, emailCrearCuenta, contraseñaCrearCuenta));
+
         guardarCuentas();
         formCrearCuenta.reset();
 
@@ -42,7 +37,7 @@ function crearCuenta(e) {
             title: 'LAS CONTRASEÑAS NO COINCIDEN',
             showConfirmButton: false,
             timer: 1300
-          })
+        })
     }
 }
 

@@ -1,0 +1,7 @@
+// DESPLEGAR DROPDOWN 
+const botonDropdwonItems = document.querySelector(".navbar-items-dropdowns");
+const ItemDropdown = document.querySelector(".navbar-dropdown");
+
+botonDropdwonItems.onclick = () => {
+    ItemDropdown.classList.toggle("mostrar");
+};

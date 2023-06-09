@@ -1,29 +1,47 @@
 // JSON y localStorage
 function guardarCarrito() {
-  localStorage.setItem("carrito", JSON.stringify(carrito)); // Guarda el carrito como un JSON en localStorage
-};
+  if (sesion.length > 0 && sesion[0].email) {
+    const carritoActual = JSON.stringify(carrito);
+    localStorage.setItem(`carrito_${sesion[0].email}`, carritoActual);
+  } else {
+    const carritoActual = JSON.stringify(carrito);
+    sessionStorage.setItem("carrito", carritoActual);
+  }
+}
 
 function cargarCarrito() {
-  const carritoGuardado = localStorage.getItem("carrito"); // Obtiene el carrito guardado de localStorage
+  if (sesion.length > 0 && sesion[0].email) {
+    const carritoGuardado = localStorage.getItem(`carrito_${sesion[0].email}`);
+    if (carritoGuardado) {
+      carrito = JSON.parse(carritoGuardado);
+      actualizarContadorCarrito();
+    }
+  } else {
+    const carritoGuardado = sessionStorage.getItem("carrito");
+    if (carritoGuardado) {
+      carrito = JSON.parse(carritoGuardado);
+      actualizarContadorCarrito();
+    }
+  }
+}
 
-  carritoGuardado && (carrito = JSON.parse(carritoGuardado));
-};
+
 
 function guardarCuentas() {
-  localStorage.setItem("cuentas", JSON.stringify(cuentas))
-};
+  localStorage.setItem("cuentas", JSON.stringify(cuentas));
+}
 
 function cargarCuentas() {
   const cuentasGuardadas = localStorage.getItem("cuentas");
-  cuentasGuardadas && (cuentas = JSON.parse(cuentasGuardadas));
+  cuentas = cuentasGuardadas ? JSON.parse(cuentasGuardadas) : [];
 }
 
 function guardarSesion() {
   localStorage.setItem("sesion", JSON.stringify(sesion));
-};
+}
 
 function cargarSesion() {
   const sesionGuardada = localStorage.getItem("sesion");
-  sesionGuardada && (sesion = JSON.parse(sesionGuardada))
+  sesion = sesionGuardada ? JSON.parse(sesionGuardada) : [];
 }
 

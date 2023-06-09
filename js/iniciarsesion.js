@@ -6,8 +6,26 @@ const botonIniciarSesion = document.querySelectorAll(".iniciarsesion");
 
 let sesion = [];
 
+function cargarSesion() {
+    const sesionGuardada = localStorage.getItem("sesion");
+    sesion = sesionGuardada ? JSON.parse(sesionGuardada) : [];
+}
+
+cargarSesion();
+
+if (sesion.length > 0) {
+    const usuario = sesion[0].nombre.toUpperCase();
+    nombreUsuario.forEach((element) => {
+        element.textContent = "¡HOLA, " + usuario + "!";
+    });
+    botonIniciarSesion.forEach((boton) => boton.classList.add("ocultar"));
+} else {
+    sesion = [];
+}
+
+
 if (window.location.pathname.includes("iniciarsesion.html")) {
-  formIniciarSesion.addEventListener("submit", login);
+    formIniciarSesion.addEventListener("submit", login);
 }
 
 function login(e) {
@@ -38,6 +56,10 @@ function login(e) {
 
         formIniciarSesion.reset();
 
+        setTimeout(() => {
+            location.reload();
+        }, 100);
+
     } else {
         Swal.fire({
             position: 'center',
@@ -48,13 +70,30 @@ function login(e) {
     }
 }
 
-cargarSesion();
-cargarCuentas();
 
-if (sesion.length > 0) {
-    const usuario = sesion[0].nombre.toUpperCase();
-    nombreUsuario.forEach((element) => {
-        element.textContent = "¡HOLA, " + usuario + "!";
+const botonesCerrarSesion = document.querySelectorAll(".cerrarsesion");
+
+botonesCerrarSesion.forEach((boton) => {
+  boton.addEventListener("click", cerrarSesion);
+});
+
+function verificarSesion() {
+  if (sesion.length === 0) {
+    botonesCerrarSesion.forEach((boton) => {
+      boton.classList.add("ocultar");
     });
-    botonIniciarSesion.forEach((boton) => boton.classList.add("ocultar"));
+  }
 }
+
+verificarSesion();
+
+function cerrarSesion() {
+  sesion = [];
+  guardarSesion();
+  botonesCerrarSesion.forEach((boton) => {
+    boton.classList.add("ocultar");
+  });
+  location.reload();
+}
+
+

@@ -46,6 +46,16 @@ button {
     font-size: small;
 }
 
+.cerrarsesion {
+    color: $color-primary;
+    text-decoration: none;
+    font-size: small;
+}
+
+.flechita-drop {
+    display: none;
+}
+
 // Formularios
 .form {
     display: flex;
@@ -504,8 +514,8 @@ footer {
     .header-right-mobile {
         display: none;
     }
-    
-    
+
+
     .opciones-buscador {
         display: block;
         position: fixed;
@@ -530,6 +540,7 @@ footer {
 
         }
     }
+
     .nav-up {
         background-color: $bg-color;
         display: flex;
